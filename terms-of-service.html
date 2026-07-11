@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Términos de Servicio — DermatoSport</title>
+  <style>
+    :root {
+      --bg: #f4f6f4;
+      --surface: #ffffff;
+      --accent: #1a6b3c;
+      --accent-dark: #135230;
+      --accent-light: #e8f5ee;
+      --muted: #4a4a4a;
+      --border: #dde8e1;
+      --radius: 12px;
+      --shadow: 0 1px 4px rgba(0,0,0,0.07);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: #1a1a1a;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.75;
+      -webkit-text-size-adjust: 100%;
+      overflow-x: hidden;
+    }
+
+    /* HEADER */
+    header {
+      background: linear-gradient(135deg, #1a6b3c 0%, #0f4a28 100%);
+      color: #fff;
+      padding: clamp(32px, 7vw, 60px) 20px clamp(28px, 5vw, 48px);
+      text-align: center;
+    }
+    .badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.28);
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: .09em;
+      text-transform: uppercase;
+      padding: 4px 14px;
+      margin-bottom: 12px;
+      color: #b8e8ce;
+    }
+    .header-app {
+      font-size: 13px;
+      font-weight: 700;
+      color: #7dd4a8;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+    header h1 {
+      font-size: clamp(22px, 5.5vw, 38px);
+      font-weight: 800;
+      letter-spacing: -.5px;
+      margin-bottom: 10px;
+      line-height: 1.2;
+    }
+    header .fecha { font-size: 13px; color: rgba(255,255,255,0.6); }
+
+    /* CONTAINER */
+    .container {
+      max-width: 780px;
+      margin: 0 auto;
+      padding: 0 14px 60px;
+    }
+
+    /* SUMMARY CARDS */
+    .summary-bar {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+      margin: 24px 0 28px;
+    }
+    @media (min-width: 540px) {
+      .summary-bar { grid-template-columns: repeat(4, 1fr); }
+    }
+    .summary-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 12px 12px;
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      box-shadow: var(--shadow);
+    }
+    .s-icon { font-size: 18px; line-height: 1; flex-shrink: 0; margin-top: 1px; }
+    .s-label { font-size: 12px; font-weight: 700; color: var(--accent); display: block; margin-bottom: 2px; }
+    .s-desc  { font-size: 11px; color: var(--muted); line-height: 1.4; }
+
+    /* SECTIONS */
+    section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: clamp(16px, 4.5vw, 28px);
+      margin-bottom: 12px;
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+    section h2 {
+      font-size: clamp(14px, 3.5vw, 17px);
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 12px;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      line-height: 1.3;
+    }
+    .h-icon { font-size: 16px; flex-shrink: 0; }
+
+    section p, section li {
+      font-size: clamp(13px, 3vw, 15px);
+      color: var(--muted);
+      line-height: 1.75;
+      text-align: justify;
+      text-justify: inter-word;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+    section p + p { margin-top: 10px; }
+    section ul { padding-left: 18px; margin-top: 10px; }
+    section li { margin-bottom: 8px; }
+
+    .highlight {
+      background: var(--accent-light);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 8px 8px 0;
+      padding: 11px 14px;
+      margin-top: 14px;
+      font-size: clamp(12px, 2.8vw, 14px);
+      color: #155230;
+      font-weight: 600;
+      line-height: 1.6;
+      text-align: justify;
+      hyphens: auto;
+      -webkit-hyphens: auto;
+    }
+
+    /* CONTACT */
+    .contact-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      margin-top: 14px;
+      background: var(--accent-light);
+      border: 1px solid #b2d9c2;
+      border-radius: 10px;
+      padding: 11px 16px;
+      color: var(--accent-dark);
+      font-weight: 600;
+      font-size: clamp(12px, 3vw, 14px);
+      text-decoration: none;
+      word-break: break-all;
+    }
+    .contact-link:hover { background: #d0eadb; }
+
+    /* FOOTER */
+    footer {
+      text-align: center;
+      padding: 22px 20px;
+      font-size: 12.5px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="badge">Documento legal</div>
+  <div class="header-app">DermatoSport</div>
+  <h1>Términos de Servicio</h1>
+  <p class="fecha">Última actualización: <span id="fecha"></span></p>
+</header>
+
+<div class="container">
+
+  <div class="summary-bar">
+    <div class="summary-card">
+      <span class="s-icon">⚠️</span>
+      <div><span class="s-label">No es diagnóstico médico</span><span class="s-desc">Uso informativo y educativo</span></div>
+    </div>
+    <div class="summary-card">
+      <span class="s-icon">📴</span>
+      <div><span class="s-label">Funciona sin conexión</span><span class="s-desc">No requiere internet</span></div>
+    </div>
+    <div class="summary-card">
+      <span class="s-icon">🆓</span>
+      <div><span class="s-label">Gratuita</span><span class="s-desc">Sin compras ni suscripciones</span></div>
+    </div>
+    <div class="summary-card">
+      <span class="s-icon">👤</span>
+      <div><span class="s-label">Sin cuentas</span><span class="s-desc">Sin registro ni login</span></div>
+    </div>
+  </div>
+
+  <section>
+    <h2><span class="h-icon">📄</span> 1. Aceptación de los términos</h2>
+    <p>Al descargar, instalar o utilizar <strong>DermatoSport</strong>, usted acepta quedar vinculado por estos Términos de Servicio. Si no está de acuerdo con alguna parte de estos términos, le pedimos no utilizar la aplicación.</p>
+    <p>Estos términos se aplican a todas las funciones de la app: análisis de Dermatoglifia Deportiva, cálculo del Índice de Masa Corporal (IMC) y cálculo de Frecuencia Cardíaca (FC).</p>
+  </section>
+
+  <section>
+    <h2><span class="h-icon">🎯</span> 2. Descripción del servicio</h2>
+    <p>DermatoSport es una aplicación móvil gratuita que ofrece herramientas de <strong>orientación deportiva y educativa</strong> basadas en métodos de clasificación dermatoglífica, fórmulas antropométricas (IMC) y cálculos de zonas de entrenamiento cardiovascular (método Karvonen).</p>
+    <p>Todas las herramientas operan de forma local en su dispositivo, sin necesidad de conexión a internet ni creación de cuentas.</p>
+  </section>
+
+  <section>
+    <h2><span class="h-icon">⚠️</span> 3. Uso informativo — no es un servicio médico</h2>
+    <p>Los resultados que ofrece DermatoSport (patrones dermatoglíficos, clasificación de IMC, zonas de FC) son de carácter <strong>orientativo, educativo y deportivo</strong>. La aplicación <strong>no diagnostica, trata ni previene ninguna enfermedad</strong>, y no sustituye la evaluación, el diagnóstico ni el consejo de un médico, nutricionista, entrenador certificado u otro profesional de la salud.</p>
+    <div class="highlight">
+      🩺 Ante cualquier decisión relacionada con su salud, entrenamiento físico o el de un menor a su cargo, consulte siempre con un profesional calificado antes de actuar según los resultados de la app.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="h-icon">📊</span> 4. Precisión y limitaciones de los resultados</h2>
+    <p>Los cálculos de la app se basan en fórmulas y estándares científicos reconocidos (clasificación dermatoglífica, tablas CDC para IMC, fórmulas de Haskell &amp; Fox, Tanaka y el método Karvonen para FC). Sin embargo, estos métodos tienen limitaciones conocidas: por ejemplo, el IMC no distingue masa muscular de masa grasa, y la dermatoglifia refleja el potencial genético (genotipo), no el rendimiento real, que depende del entrenamiento, la alimentación y otros factores (fenotipo).</p>
+    <p>DermatoSport no garantiza que los resultados sean exactos, completos o aplicables a cada caso particular. El usuario asume la responsabilidad de interpretar los resultados con criterio y de contrastarlos con la opinión de un profesional cuando sea necesario.</p>
+  </section>
+
+  <section>
+    <h2><span class="h-icon">👤</span> 5. Responsabilidades del usuario</h2>
+    <ul>
+      <li>Usar la aplicación de forma responsable y conforme a su propósito informativo/deportivo.</li>
+      <li>Ingresar datos veraces (nombre, fecha de nacimiento, peso, talla, huellas dactilares, frecuencia cardíaca) bajo su propio criterio.</li>
+      <li>No utilizar la app como único fundamento para decisiones médicas, de entrenamiento de alto rendimiento o de selección deportiva.</li>
+      <li>Mantener protegido su dispositivo, ya que los datos ingresados se guardan únicamente de forma local.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2><span class="h-icon">🧒</span> 6. Uso por menores de edad</h2>
+    <p>DermatoSport incluye una función de clasificación de IMC por percentil para niños y adolescentes (referencia CDC). Cuando la app sea utilizada para evaluar a un menor, es responsabilidad del padre, madre, tutor o profesional a cargo ingresar y gestionar dicha información, así como interpretar los resultados con el acompañamiento de un profesional de la salud o el deporte cuando corresponda.</p>
+  </section>
+
+  <section>
+    <h2><span class="h-icon">©️</span> 7. Propiedad intelectual</h2>
+    <p>El nombre "DermatoSport", su diseño, logotipos, textos, ilustraciones y código son propiedad de su desarrollador. Queda prohibida la reproducción, distribución o modificación total o parcial de la aplicación sin autorización previa por escrito.</p>
+  </section>
+
+  <section>
+    <h2><span class="h-icon">🚫</span> 8. Limitación de responsabilidad</h2>
+    <p>DermatoSport se ofrece "tal cual" (as is), sin garantías de ningún tipo, expresas o implícitas. En la máxima medida permitida por la ley, el desarrollador no será responsable por daños directos, indirectos, incidentales o consecuentes derivados del uso o la imposibilidad de uso de la aplicación, incluyendo decisiones tomadas a partir de sus resultados.</p>
+  </section>
+
+  <section>
+    <h2><span class="h-icon">✏️</span> 9. Modificaciones de estos términos</h2>
+    <p>Podemos actualizar estos Términos de Servicio ocasionalmente para reflejar mejoras, cambios legales o nuevas funciones de la app. Cualquier cambio relevante será comunicado mediante una actualización de DermatoSport en Google Play Store. Le recomendamos revisar esta página periódicamente.</p>
+  </section>
+
+  <section>
+    <h2><span class="h-icon">📬</span> 10. Contacto</h2>
+    <p>Si tiene preguntas sobre estos Términos de Servicio, puede escribirnos a:</p>
+    <a class="contact-link" href="mailto:edison670107595@gmail.com">
+      ✉️ edison670107595@gmail.com
+    </a>
+  </section>
+
+</div>
+
+<footer>
+  &copy; <span id="anio"></span> DermatoSport &mdash; Todos los derechos reservados.<br>
+  Estos términos aplican exclusivamente a la aplicación móvil DermatoSport.
+</footer>
+
+<script>
+  const hoy = new Date();
+  const opts = { year: 'numeric', month: 'long', day: 'numeric' };
+  document.getElementById('fecha').textContent = hoy.toLocaleDateString('es-ES', opts);
+  document.getElementById('anio').textContent = hoy.getFullYear();
+</script>
+
+</body>
+</html>
